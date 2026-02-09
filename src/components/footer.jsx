@@ -1,21 +1,19 @@
-import { useSelector } from "react-redux";
-
+import "../styles/footer.css"
 
 const Footer = () => {
-
-    const theme = useSelector((state) => state.ui.theme)
-
     return (
-        <footer style={{
-            padding: "20px",
-            background: theme === "light" ? "#eee" : "#333",
-            color: theme === "light" ? "#000" : "#fff",
-            marginTop: "40px",
+        <footer className="footer">
+            <div className="container"> 
+                <p>© 2026 AniStyle. Все права защищены.</p>
 
-        }}>
-            <p> AniStyle &copy; 2024</p>
+                <div className="footer-links">
+                    <a href="#">О нас </a>
+                    <a href="#">Контакты</a>
+
+                </div>
+            </div>
         </footer>
     )
-}   
+}
 
-export default Footer;
+export default Footer

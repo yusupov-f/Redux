@@ -1,20 +1,23 @@
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import "../styles/home.css"
+
+
 
 const Home = () => {
 
     const theme = useSelector((state) => state.ui.theme)
 
+    useEffect(() => {
+        document.body.className = theme  
+    }, [theme])
+
     return (
-        <main style={{
-            padding: "40px",
-            minHeight: "60px",
-            background: theme === "light" ? "#fff" : "#222",
-            color: theme === "light" ? "#000" : "#fff",
-        }}>
-            <h2>Welcome to AniStyle</h2>
-            <p>Покупка совреенной одежды.</p>
+        <main className="home container">
+            <h2> Главная страница</h2>
+                <p> Добро пожаловать на сайт AniStyle!</p>
         </main>
     )
-}
+};
 
-export default Home;
+export default Home
