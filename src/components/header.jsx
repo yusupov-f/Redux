@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleTheme } from "../features/ui/uiSlice";
 import "../styles/header.css"
 
@@ -9,9 +9,9 @@ const Header = () => {
 
     
     return (
-        <header>
+        <header className="header">
             <div className="header-inner container">
-            <div className="Мой сайт на редукс"></div>
+            <div className="logo">Сайт на редуксе</div>
 
             <nav className="nav">
                 <a href="#">Главная</a>
